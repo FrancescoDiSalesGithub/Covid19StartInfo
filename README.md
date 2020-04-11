@@ -1,6 +1,6 @@
 # Covid19StartInfo
 
-This program checks all the hyperlinks releated to corona virus in ansa's web page.
+This program checks all the hyperlinks releated to corona virus in ansa's web page and prints all the hyperlinks in the terminal.
 
 # How to install
 
