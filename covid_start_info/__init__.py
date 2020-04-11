@@ -1,14 +1,16 @@
 
-from model_covid_19 import covidModel
 from controller_covid_19 import covidController
-from view_covid_19 import covidView
 
 
 
 if __name__ == "__main__":
 
+    print("======= COVID ANSA WEB SCRAPER =========")
+    print("do you want to save the results on file or print on console? (0 - file 1-console) ?")
+    choice = int(input())
+
     mainControllerCovid = covidController()
-    mainControllerCovid.downloadAnsaInfo()
+    mainControllerCovid.downloadAnsaInfo(choice)
 
 
 
