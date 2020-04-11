@@ -26,12 +26,13 @@ class covidController:
             for i in listTags:
                 hrefLinks = responseAnsaInfo.find_all(href=re.compile(i))
                 for j in hrefLinks:
-                    filteredList.append(j)
+                    editHref = str(j).replace('/sito', covidEnumerate.covidEnum.URL.value + "sito")
+                    filteredList.append(editHref)
 
             self.__covidModel = covidModel(filteredList)
             self.__covidView = covidView()
 
-            self.__covidView.printToConsole(self.__covidModel)
+            self.__covidView.saveToFile(self.__covidModel)
 
         except IOError:
             print("[ERROR]: network error")
