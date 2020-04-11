@@ -28,8 +28,9 @@ class covidController:
             for i in listTags:
                 hrefLinks = responseAnsaInfo.find_all(href=re.compile(i))
                 for j in hrefLinks:
-                    editHref = str(j).replace('/sito', covidEnumerate.covidEnum.URL.value + "sito")
-                    filteredList.append(editHref)
+                    if(str(j).find("class")<0):
+                        editHref = str(j).replace('/sito', covidEnumerate.covidEnum.URL.value + "sito")
+                        filteredList.append(editHref)
 
             self.__covidModel.setHrefLinks(filteredList)
             self.__covidView.saveToFile(self.__covidModel)
