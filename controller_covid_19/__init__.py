@@ -13,7 +13,7 @@ class covidController:
     def __init__(self,covidModel,covidView):
         self.__covidModel = covidModel
         self.__covidView = covidView
-        pass
+
 
     def downloadAnsaInfo(self):
 
