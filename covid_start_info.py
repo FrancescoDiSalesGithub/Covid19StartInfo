@@ -1,4 +1,3 @@
-
 from controller_covid_19 import covidController
 
 
