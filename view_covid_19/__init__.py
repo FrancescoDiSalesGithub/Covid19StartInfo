@@ -1,4 +1,3 @@
-from model_covid_19 import covidModel
 from enum_covid_19 import covidEnumerate
 
 import webbrowser
