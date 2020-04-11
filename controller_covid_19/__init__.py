@@ -14,7 +14,7 @@ class covidController:
     def __init__(self):
         pass
 
-    def downloadAnsaInfo(self,choice):
+    def downloadAnsaInfo(self):
 
         try:
             getAnsaInfo = requests.get(covidEnumerate.covidEnum.URL.value)
@@ -31,18 +31,10 @@ class covidController:
             self.__covidModel = covidModel(filteredList)
             self.__covidView = covidView()
 
-            if choice == 0:
-                print("insert path:")
-                path=input()
-                self.__covidView.printToFile(path,self.__covidModel)
-            elif choice == 1:
-                self.__covidView.printToConsole(self.__covidModel)
-            else:
-                raise Exception
+            self.__covidView.printToConsole(self.__covidModel)
 
         except IOError:
             print("[ERROR]: network error")
-        except Exception:
-            print("Scelta non valida ")
+
 
 
