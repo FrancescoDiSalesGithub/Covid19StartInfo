@@ -11,7 +11,9 @@ class covidController:
     __covidModel = None
     __covidView = None
 
-    def __init__(self):
+    def __init__(self,covidModel,covidView):
+        self.__covidModel = covidModel
+        self.__covidView = covidView
         pass
 
     def downloadAnsaInfo(self):
@@ -29,9 +31,7 @@ class covidController:
                     editHref = str(j).replace('/sito', covidEnumerate.covidEnum.URL.value + "sito")
                     filteredList.append(editHref)
 
-            self.__covidModel = covidModel(filteredList)
-            self.__covidView = covidView()
-
+            self.__covidModel.setHrefLinks(filteredList)
             self.__covidView.saveToFile(self.__covidModel)
 
         except IOError:
