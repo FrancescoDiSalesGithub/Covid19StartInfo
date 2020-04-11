@@ -1,2 +1,2 @@
 echo "covid19StartInfo installer:"
-pip install -r requirements.txt
+pip3 install -r requirements.txt
