@@ -3,8 +3,7 @@ import requests
 import re
 
 from enum_covid_19 import covidEnumerate
-from model_covid_19 import covidModel
-from view_covid_19 import covidView
+
 
 class covidController:
 

@@ -23,5 +23,5 @@ class covidView:
                 fileOutput.write("<br/>")
 
         fileOutput.close()
-        webbrowser.open("file://"+os.getcwd()+"/result.html")
+        webbrowser.open("file://"+os.getcwd()+"/"+covidEnumerate.covidEnum.FILENAMEOUTPUT.value)
 
