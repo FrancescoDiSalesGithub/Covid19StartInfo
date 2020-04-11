@@ -4,17 +4,9 @@ class covidView:
     def __init__(self):
         pass
 
-    def printToFile(self,path,covidModel):
-        outputfile = open(path,"w+")
+    def printToConsole(self,covidModel):
         filteredInfo = covidModel.getHrefLinks()
 
         for i in filteredInfo:
-            outputfile.write(i)
-        outputfile.close()
-
-    def printToConsole(self,covidModel):
-        hrefList = covidModel.getHrefLinks()
-
-        for i in hrefList:
             print(i)
 
